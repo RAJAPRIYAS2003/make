@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 88px 0;
+}
+:root{
+    --logo-ff-h2:'Satisfy', cursive;
+    --font-family-1: 'Poppins', sans-serif;
+    --text-color-1:#613228;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/head-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav .navcontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    background-color: #eedbc3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+nav .navcontainer .logo h2{
+    font-family: var(--logo-ff-h2);
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-color-1);
+}
+nav .navcontainer .logo h5{
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-top: -10px;
+    color: var(--text-color-1);
+}
+nav .navcontainer ul{
+    display: flex;
+    transition: 0.4s;
+}
+nav .navcontainer ul li{
+    list-style-type: none;
+    padding: 0 20px;
+}
+nav .navcontainer ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    color: var(--text-color-1);
+    transition: 0.1s;
+}
+nav .navcontainer ul li a:hover{
+    color: #705049;
+}
+#menubtn{
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--text-color-1);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 60%);
+    z-index: 10;
+    display: none;
+  }
+/*.......................................header.........................*/
+@media only screen and (max-width:400px) and (min-width:320px) {
+    #menubtn{
+        display: block;
+    }
+    header{
+        padding: 0 ;
+        background-image: url(images/mobile-bg-img.jpg);
+        background-size:cover;
+    }
+    nav{
+        
+    }
+    nav .navcontainer{
+        padding: 0;
+        background-color: #fcf8f3;
+        position: fixed;
+        height: 13vh;
+        width: 100%;
+        top: 0;
+    }
+    nav .navcontainer .logo{
+        padding: 13px;
+    }
+    nav .navcontainer .logo h2{
+        font-size: 30px;
+    }
+    nav .navcontainer .logo h5{
+       /* font-size: 10px;*/
+        letter-spacing: 0;
+    }
+    nav .navcontainer ul{
+        flex-direction: column;
+        position: fixed;
+        width: 50%;
+        top: 80px;
+        left: -50%;
+        background-color: #fcf8f3;
+    }
+    nav .navcontainer ul li{
+        padding: 20px 10px;
+    }
+    nav .navcontainer ul li a{
+        color: black;
+        font-weight: 400;
+    }
+    nav .navcontainer ul.show{
+        left: 0;
+    }
+}
+.home-container{
+   margin-top: 80px;
+   margin-left: 50px;
+   position: absolute;
+   top: 100px;
+}
+
+.home-container .h-contents h2{
+    font-size: 40px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    color: var(--text-color-1);
+}
+.home-container .h-contents p{
+    font-family: var(--font-family-1);
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 17px;
+}
+.home-container .h-contents button{
+    background-color: #613228;
+    padding: 15px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+.home-container .h-contents button:hover{
+    background-color: #64392f;
+}
+.home-container .h-contents button a{
+    text-decoration: none;
+    color: #fcf8f3;
+    font-family: var(--font-family-1);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+@media only screen and (max-width:400px) and (min-width:320px){
+    .home-container{
+       margin-left: 20px;
+       margin-top: 80px;
+    }
+    .home-container .h-contents h2{
+        font-size: 24px;
+        padding-top: 200px;
+    }
+    .home-container .h-contents p{
+        font-size: 16px;
+    }
+}
+/*..................................about-section...........*/
+.about-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 70px 0;
+}
+.about-container .about-left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.about-container .about-left .con-sec h4{
+    font-size: 15px;
+    font-family: var(--font-family-1);
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.about-container .about-left .con-sec h2{
+    font-size: 40px;
+    font-family: var(--logo-ff-h2);
+}
+.about-container .about-left .con-sec p{
+    font-size: 15px;
+    font-family: var(--font-family-1);
+}
+.about-container .about-left .img-sec {
+    margin-top: 50px;
+    margin-left: 30px;
+    display: flex;
+    gap: 60px;
+}
+.about-container .about-left .img-sec img{
+    width: 230px;
+    transition: 0.4s;
+}
+.about-container .about-left .img-sec img:hover{
+     transform: scale(1.1);
+}
+.about-container .about-right{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.about-container .about-right img{
+    width: 400px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.about-container .about-right h3{
+    font-size: 17px;
+    font-family: var(--font-family-1);
+    color: black;
+    font-weight: 300;
+    text-align: center;
+    align-items: center;
+    background-color: #eccba1;
+    margin-top: -25px;
+    padding: 14px 20px;
+}
+@media only screen and (max-width:400px) and (min-width:320px){
+    .about-container{
+        flex-direction: column;
+    }
+    .about-container .about-left{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .about-container .about-left .con-sec p{
+        font-size: 16px;
+    }
+    .about-container .about-left .img-sec{
+        margin-left: 0;
+        gap: 15px;
+    }
+    .about-container .about-left .img-sec img{
+        width: 170px;
+    }
+    .about-container .about-right{
+        width: 100%;
+    }
+    .about-container .about-right img{
+        width: 300px;
+    }
+}
+/*......................services.........................*/
+#services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eccba1;
+}
+.service-container{
+    width: 87%;
+    flex-direction: column;
+}
+.service-container .ser-top h3{
+    font-size: 20px;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+    margin: 20px 0;
+}
+.service-container .ser-top h2{
+    font-size: 23px;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+}
+.service-container .ser-top p{
+    font-size:16px;
+    font-family: var(--font-family-1);
+    margin: 10px 0;
+}
+.ser-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.ser-bottom .carousel{
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 3px gray;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+    align-items: center;
+}
+.ser-bottom .btns{
+    text-align: center;
+}
+.prev-btn,
+.next-btn{
+    top: 10%;
+    transform: translatey(-50%);
+    background-color: rgb(100, 44, 44);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+@media only screen and (max-width:400px) and (min-width:320px){
+    .service-container{
+        width: 90%;
+    }
+    .ser-bottom .carousel{
+        width: 100%;
+        height: 250px;
+    }
+}
+/*..................................gallery-section............*/
+#gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eedbc3;
+}
+.gallery-container{
+    width: 87%;
+    margin-bottom: 70px;
+}
+.gallery-container .gallerys{
+    margin-top: 50px;
+}
+.gallery-container .gallerys h2{
+    font-size: 24px;
+    font-family: var(--font-family-1);
+}
+.images .img-1{
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.images img{
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+.images{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.images .img-1:hover img{
+    transform: scale(1.1);
+}
+@media only screen and (max-width:400px) and (min-width:320px){
+    .gallery-container{
+        width: 90%;
+    }
+    .images{
+        display: flex;
+        flex-direction: column;
+    }
+    .images img{
+        width: 100%;
+    }
+}
+/*........................contact..............................*/
+#contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee0cf;
+}
+.contact-container{
+    width: 87%;
+    margin-top: 60px;
+}
+.contact-container h2{
+    font-size: 25px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+}
+.contact-container .contact-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contact-container .contact-items h3{
+    font-size: 20px;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact-container .contact-items h4{
+    font-size: 18px;
+    font-family: var(--font-family-1);
+    font-weight: 400;
+}
+ .bottom{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottom h3{
+    font-family: var(--font-family-1);
+    font-size: 12px;
+}
+.bottom h2{
+    font-size: 12px;
+}
+@media only screen and (max-width:400px) and (min-width:320px){
+    .contact-container{
+        width: 80%;
+    }
+    .contact-container .contact-items{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
